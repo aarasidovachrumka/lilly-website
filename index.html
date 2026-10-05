@@ -1,0 +1,2009 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+>
+
+<meta name="theme-color" content="#151518">
+
+<title>Lilly Blake</title>
+
+<style>
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  color: white;
+
+  background:
+    radial-gradient(
+      circle at 15% 5%,
+      rgba(92,120,255,.18),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 95% 90%,
+      rgba(255,120,156,.13),
+      transparent 35%
+    ),
+    #0d0d0f;
+
+  display: flex;
+  justify-content: center;
+
+  padding: 18px;
+}
+
+
+/* PAGE */
+
+.page {
+  width: 100%;
+  max-width: 410px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #1d1d20 0%,
+      #18181b 60%,
+      #131315 100%
+    );
+
+  border-radius: 30px;
+
+  overflow: hidden;
+
+  position: relative;
+
+  border: 1px solid rgba(255,255,255,.06);
+
+  box-shadow:
+    0 35px 100px rgba(0,0,0,.65);
+
+  animation: pageIn .55s ease both;
+}
+
+
+@keyframes pageIn {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(14px)
+      scale(.985);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: none;
+  }
+}
+
+
+/* HERO */
+
+.hero {
+  height: 375px;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.hero-image {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center 30%;
+
+  transform: scale(1.02);
+}
+
+.hero-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+
+      rgba(0,0,0,.03) 0%,
+
+      rgba(0,0,0,.03) 42%,
+
+      rgba(24,24,27,.20) 57%,
+
+      rgba(24,24,27,.88) 84%,
+
+      #18181b 100%
+    );
+}
+
+
+/* TOP */
+
+.topbar {
+  position: absolute;
+
+  top: 17px;
+  left: 17px;
+  right: 17px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+.top-pill {
+  padding: 7px 11px;
+
+  border-radius: 100px;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  background: rgba(10,10,12,.35);
+
+  border:
+    1px solid rgba(255,255,255,.13);
+
+  backdrop-filter: blur(14px);
+
+  -webkit-backdrop-filter:
+    blur(14px);
+
+  box-shadow:
+    0 5px 20px rgba(0,0,0,.15);
+}
+
+
+/* PROFILE */
+
+.profile {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  bottom: 18px;
+
+  text-align: center;
+
+  padding: 0 20px;
+}
+
+.name {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 7px;
+
+  font-size: 30px;
+
+  font-weight: 800;
+
+  letter-spacing: -.8px;
+
+  text-shadow:
+    0 4px 18px rgba(0,0,0,.45);
+}
+
+.verified {
+  width: 19px;
+  height: 19px;
+
+  border-radius: 50%;
+
+  display: inline-flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #1da1f2,
+      #1686e8
+    );
+}
+
+.verified svg {
+  width: 11px;
+  height: 11px;
+
+  fill: white;
+}
+
+.subline {
+  margin-top: 7px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  color:
+    rgba(255,255,255,.82);
+}
+
+.online-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #36e56c;
+
+  box-shadow:
+    0 0 9px rgba(54,229,108,.9);
+
+  animation:
+    pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+  0%,100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: .35;
+  }
+}
+
+
+/* SOCIAL ICONS */
+
+.socials {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  margin-top: 19px;
+}
+
+.social {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  border-radius: 50%;
+
+  text-decoration: none;
+
+  color: white;
+
+  background:
+    rgba(255,255,255,.12);
+
+  border:
+    1px solid rgba(255,255,255,.10);
+
+  backdrop-filter:
+    blur(12px);
+
+  -webkit-backdrop-filter:
+    blur(12px);
+
+  transition: .16s;
+}
+
+.social:hover {
+  transform:
+    translateY(-3px)
+    scale(1.05);
+
+  background:
+    rgba(255,255,255,.19);
+}
+
+.social svg {
+  width: 18px;
+  height: 18px;
+
+  fill: currentColor;
+}
+
+.social-brand-img {
+  width: 19px;
+  height: 19px;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+.fallback-brand {
+  display: none;
+
+  font-size: 15px;
+
+  font-weight: 900;
+}
+
+
+/* CONTENT */
+
+.content {
+  padding:
+    5px 13px 25px;
+}
+
+
+/* FEATURE */
+
+.feature {
+  position: relative;
+
+  display: block;
+
+  width: 100%;
+  height: 218px;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  text-decoration: none;
+
+  color: white;
+
+  border:
+    1px solid rgba(255,255,255,.09);
+
+  box-shadow:
+    0 16px 34px rgba(0,0,0,.25);
+
+  transition: .18s;
+}
+
+.feature:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 20px 42px rgba(0,0,0,.38);
+}
+
+.feature-image {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.feature-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+
+      transparent 30%,
+
+      rgba(0,0,0,.10) 55%,
+
+      rgba(0,0,0,.80) 100%
+    );
+}
+
+.feature-badge {
+  position: absolute;
+
+  top: 12px;
+  right: 12px;
+
+  padding: 6px 10px;
+
+  border-radius: 100px;
+
+  background:
+    rgba(0,0,0,.38);
+
+  border:
+    1px solid rgba(255,255,255,.12);
+
+  backdrop-filter: blur(10px);
+
+  font-size: 10px;
+
+  font-weight: 700;
+}
+
+.feature-copy {
+  position: absolute;
+
+  bottom: 15px;
+  left: 15px;
+  right: 15px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.feature-title {
+  text-align: left;
+
+  font-size: 19px;
+
+  font-weight: 800;
+}
+
+.feature-sub {
+  display: block;
+
+  margin-top: 3px;
+
+  font-size: 11px;
+
+  font-weight: 500;
+
+  opacity: .7;
+}
+
+.feature-arrow {
+  width: 36px;
+  height: 36px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background:
+    rgba(255,255,255,.16);
+
+  backdrop-filter: blur(10px);
+
+  font-size: 24px;
+}
+
+
+/* SECTION */
+
+.section-title {
+  margin:
+    22px 4px 10px;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.3px;
+
+  text-transform: uppercase;
+
+  color:
+    rgba(255,255,255,.36);
+}
+
+
+/* LINKS */
+
+.links {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 9px;
+}
+
+.link {
+  min-height: 60px;
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 0 16px;
+
+  border-radius: 16px;
+
+  color: white;
+
+  text-decoration: none;
+
+  background:
+    rgba(255,255,255,.045);
+
+  border:
+    1px solid rgba(255,255,255,.055);
+
+  transition: .16s;
+}
+
+.link:hover {
+  transform: translateY(-2px);
+
+  background:
+    rgba(255,255,255,.075);
+}
+
+.link-icon {
+  width: 36px;
+  height: 36px;
+
+  border-radius: 11px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  background:
+    rgba(255,255,255,.08);
+
+  flex-shrink: 0;
+}
+
+.link-icon svg {
+  width: 19px;
+  height: 19px;
+
+  fill: currentColor;
+}
+
+.link-brand-img {
+  width: 21px;
+  height: 21px;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+.link-center {
+  position: absolute;
+
+  left: 57px;
+  right: 57px;
+
+  text-align: center;
+}
+
+.link-title {
+  font-size: 14px;
+
+  font-weight: 750;
+}
+
+.link-sub {
+  margin-top: 2px;
+
+  font-size: 9px;
+
+  color:
+    rgba(255,255,255,.39);
+}
+
+.link-arrow {
+  margin-left: auto;
+
+  font-size: 22px;
+
+  color:
+    rgba(255,255,255,.29);
+}
+
+
+/* CHAT */
+
+.primary {
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff,
+      #eeeeee
+    );
+
+  color: #111;
+
+  border: 0;
+}
+
+.primary .link-icon {
+  background:
+    rgba(0,0,0,.065);
+}
+
+.primary .link-sub {
+  color:
+    rgba(0,0,0,.44);
+}
+
+.primary .link-arrow {
+  color:
+    rgba(0,0,0,.34);
+}
+
+
+/* FANVUE */
+
+.fanvue .link-icon {
+  background: #49f264;
+
+  color: black;
+}
+
+
+/* INSTAGRAM */
+
+.instagram .link-icon {
+  background:
+    radial-gradient(
+      circle at 30% 110%,
+
+      #feda75,
+
+      #fa7e1e 28%,
+
+      #d62976 53%,
+
+      #962fbf 75%,
+
+      #4f5bd5
+    );
+}
+
+
+/* THREADS */
+
+.threads .link-icon {
+  background: white;
+
+  color: black;
+}
+
+
+/* X */
+
+.twitter .link-icon {
+  background: #050505;
+
+  border:
+    1px solid rgba(255,255,255,.13);
+}
+
+
+/* TELEGRAM */
+
+.telegram .link-icon {
+  background: #229ED9;
+}
+
+
+/* STATUS */
+
+.status-card {
+  margin-top: 18px;
+
+  padding: 14px;
+
+  border-radius: 16px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,.045),
+      rgba(255,255,255,.018)
+    );
+
+  border:
+    1px solid rgba(255,255,255,.05);
+}
+
+.status-avatar {
+  width: 36px;
+  height: 36px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+}
+
+.status-text {
+  flex: 1;
+}
+
+.status-title {
+  font-size: 11px;
+
+  font-weight: 700;
+}
+
+.status-sub {
+  margin-top: 3px;
+
+  font-size: 9px;
+
+  color:
+    rgba(255,255,255,.40);
+}
+
+.status-online {
+  font-size: 10px;
+
+  color: #5ee780;
+
+  font-weight: 700;
+}
+
+
+/* FOOTER */
+
+.footer {
+  margin-top: 20px;
+
+  padding-top: 15px;
+
+  border-top:
+    1px solid rgba(255,255,255,.04);
+
+  text-align: center;
+
+  color:
+    rgba(255,255,255,.24);
+
+  font-size: 9px;
+}
+
+
+/* OPEN IN BROWSER OVERLAY */
+
+.browser-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 99999;
+
+  display: none;
+
+  align-items: flex-end;
+
+  justify-content: center;
+
+  padding: 18px;
+
+  background:
+    rgba(0,0,0,.72);
+
+  backdrop-filter:
+    blur(13px);
+
+  -webkit-backdrop-filter:
+    blur(13px);
+}
+
+.browser-overlay.show {
+  display: flex;
+}
+
+.browser-box {
+  width: 100%;
+
+  max-width: 410px;
+
+  padding: 22px;
+
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #29292d,
+      #1b1b1e
+    );
+
+  border:
+    1px solid rgba(255,255,255,.10);
+
+  box-shadow:
+    0 25px 80px rgba(0,0,0,.65);
+
+  animation:
+    overlayUp .25s ease;
+}
+
+@keyframes overlayUp {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: none;
+  }
+}
+
+.browser-top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 13px;
+}
+
+.browser-title {
+  font-size: 20px;
+
+  font-weight: 800;
+}
+
+.browser-close {
+  width: 34px;
+  height: 34px;
+
+  border: 0;
+
+  border-radius: 50%;
+
+  color: white;
+
+  background:
+    rgba(255,255,255,.09);
+
+  font-size: 18px;
+
+  cursor: pointer;
+}
+
+.browser-text {
+  font-size: 14px;
+
+  line-height: 1.55;
+
+  color:
+    rgba(255,255,255,.73);
+}
+
+.steps {
+  margin-top: 17px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+.step {
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  padding: 12px;
+
+  border-radius: 14px;
+
+  background:
+    rgba(255,255,255,.05);
+
+  border:
+    1px solid rgba(255,255,255,.05);
+
+  font-size: 13px;
+}
+
+.step-number {
+  width: 27px;
+  height: 27px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  flex-shrink: 0;
+
+  background: white;
+
+  color: black;
+
+  font-weight: 800;
+}
+
+.browser-actions {
+  margin-top: 17px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 9px;
+}
+
+.browser-btn {
+  width: 100%;
+
+  min-height: 52px;
+
+  border: 0;
+
+  border-radius: 14px;
+
+  font-size: 14px;
+
+  font-weight: 750;
+
+  cursor: pointer;
+}
+
+.copy-button {
+  background: white;
+
+  color: black;
+}
+
+.continue-button {
+  color: white;
+
+  background:
+    rgba(255,255,255,.08);
+
+  border:
+    1px solid rgba(255,255,255,.08);
+}
+
+.copy-status {
+  margin-top: 8px;
+
+  text-align: center;
+
+  font-size: 11px;
+
+  color: #5ee780;
+
+  min-height: 15px;
+}
+
+
+/* MOBILE */
+
+@media(max-width:450px) {
+
+  body {
+    padding: 0;
+
+    background: #141416;
+  }
+
+  .page {
+    max-width: none;
+
+    min-height: 100vh;
+
+    border-radius: 0;
+
+    border: 0;
+
+    box-shadow: none;
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="page">
+
+
+<section class="hero">
+
+
+<img
+  src="./hero.jpg.png"
+  class="hero-image"
+  alt="Lilly Blake"
+>
+
+
+<div class="hero-overlay"></div>
+
+
+<div class="topbar">
+
+  <div class="top-pill">
+    Miami 🌴
+  </div>
+
+  <div class="top-pill">
+    creator
+  </div>
+
+</div>
+
+
+<div class="profile">
+
+
+<div class="name">
+
+  Lilly Blake
+
+  <span class="verified">
+
+    <svg viewBox="0 0 24 24">
+      <path
+        d="M9.3 16.6 4.7 12l1.5-1.5 3.1 3.1 8.5-8.5 1.5 1.5z"
+      />
+    </svg>
+
+  </span>
+
+</div>
+
+
+<div class="subline">
+
+  <span>@heylilyblake</span>
+
+  <span>•</span>
+
+  <span class="online-dot"></span>
+
+  <span>Online</span>
+
+</div>
+
+
+<div class="socials">
+
+
+<!-- INSTAGRAM -->
+
+<a
+  href="https://www.instagram.com/heylilyblake/"
+  class="social"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+
+<svg viewBox="0 0 24 24">
+
+<path
+d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"
+/>
+
+</svg>
+
+</a>
+
+
+<!-- THREADS -->
+
+<a
+  href="https://www.threads.com/@heylilyblake"
+  class="social"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+
+<img
+  class="social-brand-img"
+  src="https://cdn.simpleicons.org/threads/FFFFFF"
+  alt="Threads"
+  onerror="
+    this.style.display='none';
+    this.nextElementSibling.style.display='block';
+  "
+>
+
+<span class="fallback-brand">
+  @
+</span>
+
+</a>
+
+
+<!-- X -->
+
+<a
+  href="https://x.com/itslillyblake"
+  class="social"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+
+<svg viewBox="0 0 24 24">
+
+<path
+d="M18.2 2h3.7l-8.1 9.2L23 22h-7.2l-5.6-7.3L3.8 22H.1l8.4-9.6L-.3 2h7.4l5.1 6.7L18.2 2zm-1.3 18.1h2L6 3.8H3.9z"
+/>
+
+</svg>
+
+</a>
+
+
+<!-- TELEGRAM -->
+
+<a
+  href="https://t.me/heylillyblake"
+  class="social"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+
+<svg viewBox="0 0 24 24">
+
+<path
+d="M21.7 3.4 18.5 19c-.2 1.1-.9 1.4-1.8.9l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.4-5 9.1-8.2c.4-.4-.1-.6-.6-.2L6.1 12.8l-4.8-1.5c-1-.3-1.1-1 .2-1.5L20.3 2.6c.9-.3 1.7.2 1.4.8z"
+/>
+
+</svg>
+
+</a>
+
+
+<!-- CHAT -->
+
+<a
+  href="https://chatwme.com/lillyblake"
+  class="social"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+
+<svg viewBox="0 0 24 24">
+
+<path
+d="M4 4h16a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H8l-5 3v-3a2 2 0 0 1-1-2V6a2 2 0 0 1 2-2zm3 6h10v2H7zm0 4h7v2H7z"
+/>
+
+</svg>
+
+</a>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<main class="content">
+
+
+<!-- BIG FANVUE CARD -->
+
+<a
+  href="https://www.fanvue.com/heylilyblake/fv-4"
+  class="feature fanvue-external"
+  data-external-url="https://www.fanvue.com/heylilyblake/fv-4"
+>
+
+
+<img
+  src="./more.jpg.png"
+  class="feature-image"
+  alt="More of Lilly"
+>
+
+
+<div class="feature-overlay"></div>
+
+
+<div class="feature-badge">
+  exclusive ✦
+</div>
+
+
+<div class="feature-copy">
+
+
+<div class="feature-title">
+
+More of me
+
+<span class="feature-sub">
+tap to see what I don't post here ♡
+</span>
+
+</div>
+
+
+<div class="feature-arrow">
+›
+</div>
+
+
+</div>
+
+</a>
+
+
+
+<div class="section-title">
+connect with me
+</div>
+
+
+
+<div class="links">
+
+
+<!-- CHAT -->
+
+<a
+href="https://chatwme.com/lillyblake"
+class="link primary"
+target="_blank"
+rel="noopener noreferrer"
+>
+
+<div class="link-icon">
+
+<svg viewBox="0 0 24 24">
+
+<path
+d="M12 21s-7-4.4-9.4-8.4C.4 8.8 2.7 5 6.4 5c2.1 0 3.5 1.3 4.2 2.3C11.3 6.3 12.7 5 14.8 5c3.7 0 6 3.8 3.8 7.6C16.2 16.6 12 21 12 21z"
+/>
+
+</svg>
+
+</div>
+
+
+<div class="link-center">
+
+<div class="link-title">
+Text me here
+</div>
+
+<div class="link-sub">
+say hi 👋
+</div>
+
+</div>
+
+
+<div class="link-arrow">
+›
+</div>
+
+</a>
+
+
+
+<!-- FANVUE -->
+
+<a
+href="https://www.fanvue.com/heylilyblake/fv-4"
+class="link fanvue fanvue-external"
+data-external-url="https://www.fanvue.com/heylilyblake/fv-4"
+>
+
+
+<div class="link-icon">
+
+
+<img
+  class="link-brand-img"
+  src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Fanvue_Logo.svg"
+  alt="Fanvue"
+
+  onerror="
+    this.style.display='none';
+    this.nextElementSibling.style.display='block';
+  "
+>
+
+
+<span
+  class="fallback-brand"
+  style="color:black;"
+>
+FV
+</span>
+
+
+</div>
+
+
+<div class="link-center">
+
+<div class="link-title">
+Fanvue
+</div>
+
+<div class="link-sub">
+exclusive content
+</div>
+
+</div>
+
+
+<div class="link-arrow">
+›
+</div>
+
+
+</a>
+
+
+
+<!-- INSTAGRAM -->
+
+<a
+href="https://www.instagram.com/heylilyblake/"
+class="link instagram"
+target="_blank"
+rel="noopener noreferrer"
+>
+
+<div class="link-icon">
+
+<svg viewBox="0 0 24 24">
+
+<path
+d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"
+/>
+
+</svg>
+
+</div>
+
+
+<div class="link-center">
+
+<div class="link-title">
+Instagram
+</div>
+
+<div class="link-sub">
+@heylilyblake
+</div>
+
+</div>
+
+
+<div class="link-arrow">
+›
+</div>
+
+</a>
+
+
+
+<!-- THREADS -->
+
+<a
+href="https://www.threads.com/@heylilyblake"
+class="link threads"
+target="_blank"
+rel="noopener noreferrer"
+>
+
+
+<div class="link-icon">
+
+
+<img
+class="link-brand-img"
+src="https://cdn.simpleicons.org/threads/000000"
+alt="Threads"
+
+onerror="
+this.style.display='none';
+this.nextElementSibling.style.display='block';
+"
+>
+
+
+<span
+class="fallback-brand"
+style="color:black;"
+>
+@
+</span>
+
+
+</div>
+
+
+<div class="link-center">
+
+<div class="link-title">
+Threads
+</div>
+
+<div class="link-sub">
+@heylilyblake
+</div>
+
+</div>
+
+
+<div class="link-arrow">
+›
+</div>
+
+
+</a>
+
+
+
+<!-- X -->
+
+<a
+href="https://x.com/itslillyblake"
+class="link twitter"
+target="_blank"
+rel="noopener noreferrer"
+>
+
+<div class="link-icon">
+
+<svg viewBox="0 0 24 24">
+
+<path
+d="M18.2 2h3.7l-8.1 9.2L23 22h-7.2l-5.6-7.3L3.8 22H.1l8.4-9.6L-.3 2h7.4l5.1 6.7L18.2 2zm-1.3 18.1h2L6 3.8H3.9z"
+/>
+
+</svg>
+
+</div>
+
+
+<div class="link-center">
+
+<div class="link-title">
+X
+</div>
+
+<div class="link-sub">
+@itslillyblake
+</div>
+
+</div>
+
+
+<div class="link-arrow">
+›
+</div>
+
+</a>
+
+
+
+<!-- TELEGRAM -->
+
+<a
+href="https://t.me/heylillyblake"
+class="link telegram"
+target="_blank"
+rel="noopener noreferrer"
+>
+
+<div class="link-icon">
+
+<svg viewBox="0 0 24 24">
+
+<path
+d="M21.7 3.4 18.5 19c-.2 1.1-.9 1.4-1.8.9l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.4-5 9.1-8.2c.4-.4-.1-.6-.6-.2L6.1 12.8l-4.8-1.5c-1-.3-1.1-1 .2-1.5L20.3 2.6c.9-.3 1.7.2 1.4.8z"
+/>
+
+</svg>
+
+</div>
+
+
+<div class="link-center">
+
+<div class="link-title">
+Telegram
+</div>
+
+<div class="link-sub">
+join my community
+</div>
+
+</div>
+
+
+<div class="link-arrow">
+›
+</div>
+
+
+</a>
+
+
+</div>
+
+
+
+<div class="status-card">
+
+
+<img
+src="./hero.jpg.png"
+class="status-avatar"
+alt="Lilly"
+>
+
+
+<div class="status-text">
+
+<div class="status-title">
+Lilly is online
+</div>
+
+<div class="status-sub">
+come say hi ♡
+</div>
+
+</div>
+
+
+<div class="status-online">
+● online
+</div>
+
+
+</div>
+
+
+
+<div class="footer">
+
+© 2026 Lilly Blake
+&nbsp;•&nbsp;
+Miami
+
+</div>
+
+
+</main>
+
+
+</div>
+
+
+
+<!-- IOS / INSTAGRAM BROWSER OVERLAY -->
+
+<div
+id="browserOverlay"
+class="browser-overlay"
+>
+
+
+<div class="browser-box">
+
+
+<div class="browser-top">
+
+
+<div class="browser-title">
+Open Fanvue
+</div>
+
+
+<button
+class="browser-close"
+onclick="closeBrowserOverlay()"
+>
+×
+</button>
+
+
+</div>
+
+
+
+<div class="browser-text">
+
+Instagram is currently using its built-in browser.
+For the best experience, open this page in Safari.
+
+</div>
+
+
+
+<div class="steps">
+
+
+<div class="step">
+
+<div class="step-number">
+1
+</div>
+
+<div>
+Tap the <strong>•••</strong> menu in Instagram.
+</div>
+
+</div>
+
+
+
+<div class="step">
+
+<div class="step-number">
+2
+</div>
+
+<div>
+Choose <strong>Open in browser</strong> or <strong>Open in Safari</strong>.
+</div>
+
+</div>
+
+
+</div>
+
+
+
+<div class="browser-actions">
+
+
+<button
+class="browser-btn copy-button"
+onclick="copyFanvueLink()"
+>
+Copy Fanvue link
+</button>
+
+
+<button
+class="browser-btn continue-button"
+onclick="continueInsideInstagram()"
+>
+Continue here anyway
+</button>
+
+
+</div>
+
+
+<div
+id="copyStatus"
+class="copy-status"
+></div>
+
+
+</div>
+
+
+</div>
+
+
+
+<script>
+
+const FANVUE_URL =
+  "https://www.fanvue.com/heylilyblake/fv-4";
+
+
+function isInstagramBrowser() {
+
+  const ua =
+    navigator.userAgent ||
+    navigator.vendor ||
+    window.opera;
+
+  return /Instagram|FBAN|FBAV/i.test(ua);
+
+}
+
+
+function isAndroid() {
+
+  return /Android/i.test(
+    navigator.userAgent
+  );
+
+}
+
+
+function isIOS() {
+
+  return /iPhone|iPad|iPod/i.test(
+    navigator.userAgent
+  );
+
+}
+
+
+function openFanvueExternal(event) {
+
+  event.preventDefault();
+
+  const target =
+    event.currentTarget.dataset.externalUrl ||
+    FANVUE_URL;
+
+
+  /*
+    NORMAL BROWSER
+  */
+
+  if (!isInstagramBrowser()) {
+
+    window.location.href = target;
+
+    return;
+  }
+
+
+  /*
+    INSTAGRAM + ANDROID
+
+    Ask Android to open Chrome.
+  */
+
+  if (isAndroid()) {
+
+    const cleanTarget =
+      target.replace(
+        /^https?:\/\//,
+        ""
+      );
+
+
+    const intentUrl =
+      "intent://" +
+      cleanTarget +
+      "#Intent;" +
+      "scheme=https;" +
+      "package=com.android.chrome;" +
+      "S.browser_fallback_url=" +
+      encodeURIComponent(target) +
+      ";end";
+
+
+    window.location.href =
+      intentUrl;
+
+    return;
+  }
+
+
+  /*
+    INSTAGRAM + IPHONE
+
+    Safari cannot reliably be forced
+    from JavaScript.
+
+    Show instructions instead.
+  */
+
+  if (isIOS()) {
+
+    document
+      .getElementById("browserOverlay")
+      .classList
+      .add("show");
+
+    return;
+  }
+
+
+  window.location.href =
+    target;
+
+}
+
+
+
+document
+  .querySelectorAll(
+    ".fanvue-external"
+  )
+  .forEach(
+    element => {
+
+      element.addEventListener(
+        "click",
+        openFanvueExternal
+      );
+
+    }
+  );
+
+
+
+function closeBrowserOverlay() {
+
+  document
+    .getElementById("browserOverlay")
+    .classList
+    .remove("show");
+
+}
+
+
+
+function continueInsideInstagram() {
+
+  window.location.href =
+    FANVUE_URL;
+
+}
+
+
+
+async function copyFanvueLink() {
+
+  const status =
+    document.getElementById(
+      "copyStatus"
+    );
+
+
+  try {
+
+    await navigator
+      .clipboard
+      .writeText(
+        FANVUE_URL
+      );
+
+
+    status.textContent =
+      "Link copied ✓";
+
+
+  } catch (error) {
+
+
+    const input =
+      document.createElement(
+        "textarea"
+      );
+
+
+    input.value =
+      FANVUE_URL;
+
+
+    document.body
+      .appendChild(
+        input
+      );
+
+
+    input.select();
+
+
+    document.execCommand(
+      "copy"
+    );
+
+
+    input.remove();
+
+
+    status.textContent =
+      "Link copied ✓";
+
+  }
+
+}
+
+
+
+/*
+Close overlay when tapping
+outside the card.
+*/
+
+document
+  .getElementById(
+    "browserOverlay"
+  )
+  .addEventListener(
+    "click",
+    function(event) {
+
+      if (
+        event.target === this
+      ) {
+
+        closeBrowserOverlay();
+
+      }
+
+    }
+  );
+
+</script>
+
+
+</body>
+
+</html>
